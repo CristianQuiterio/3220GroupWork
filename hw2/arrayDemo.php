@@ -19,7 +19,7 @@ $maxValue = $_POST['maxValue'];
 $arrayData = [];
 //Filling array with random values
 for ($i = 0; $i < $numRows; $i++){
-  $arrayData = [$i];
+  $arrayData[$i]= [];
   for ($j = 0; $j < $numCols; $j++) {
     $arrayData[$i][$j] = rand($minValue, $maxValue);
   }
