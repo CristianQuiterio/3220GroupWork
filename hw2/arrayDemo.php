@@ -26,7 +26,7 @@ for ($i = 0; $i < $numRows; $i++){
 }
 
 //Printing
-print "<h2> Inputed Data</h2>";
+print "<h2> Imputed Data</h2>";
 print "<table border = '.5'>";
 foreach ($arrayData as $numRow){
   print "<tr>";
