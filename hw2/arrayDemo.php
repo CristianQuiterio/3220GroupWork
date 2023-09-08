@@ -51,7 +51,7 @@ foreach ($arrayData as $i => $numRows){
   print "<td>$rowNum</td>";
   print "<td>$sum</td>";
   print "<td>$average</td>";
-  print "<td>$standardDev</td>";
+  print "<td>".number_format($standardDev, 3)."</td>";
   print "</tr>";
 }
 print "</table>";
