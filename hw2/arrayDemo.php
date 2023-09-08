@@ -7,6 +7,7 @@
 <h1>Random Array Maker with Statistics</h1>
 <a href = "arrayDemo.html"> Back </a>
 <?php
+//Carry over variables
 $numRows = $_POST['numRows'];
 $numCols = $_POST['numCols'];
 $minValue = $_POST['minValue'];
@@ -21,6 +22,12 @@ for ($i = 0; $i < $numRows; $i++){
     $arrayData[$i][$j] = rand($minValue, $maxValue);
   }
 }
+
+//Initial Array Statistics
+print "<br><br><h2>Input Values</h2>";
+print "<li>Your array size is: ".$numRows." x ".$numCols."</li>";
+print "<li>Your minimum possible value is: ".$minValue."</li>";
+print "<li>Your maximum possible value is: ".$maxValue."</li>";
 
 //Printing
 print "<h2> Imputed Data</h2>";
