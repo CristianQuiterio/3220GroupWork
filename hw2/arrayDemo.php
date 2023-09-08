@@ -35,7 +35,7 @@ print "<table border = '.5'>";
 foreach ($arrayData as $numRow){
   print "<tr>";
   foreach ($numRow as $num){
-    print "<td>" . number_format($num, 3) . "</td>";
+    print "<td>" . $num . "</td>";
   }
   print "</tr>";
 }
@@ -55,9 +55,9 @@ foreach ($arrayData as $i => $numRows){
     $standardDev += pow($value - $average, 2);
   }
   $standardDev = sqrt($standardDev / $numCols);
-  print "<td>$rowNum</td>";
-  print "<td>$sum</td>";
-  print "<td>$average</td>";
+  print "<td>".$rowNum."</td>";
+  print "<td>".$sum."</td>";
+  print "<td>".number_format($average, 3)."</td>";
   print "<td>".number_format($standardDev, 3)."</td>";
   print "</tr>";
 }
