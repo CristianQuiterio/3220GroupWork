@@ -9,16 +9,16 @@
 <p>
 <form action = "arrayDemo.php" method = "post" >
 <p>Please enter the nuber of rows:
-<input type = "text" size = "20" name = "numRows" >
+<input type = "number" min = "1" name = "numRows" required>
 </p>
 <p>And the number of columns:
-<input type = "text" size = "20" name = "numCols" >
+<input type = "number" min = "1" name = "numCols" required>
 </p>
 <p>Please enter a minimun random value:
-<input type = "text" size = "20" name = "minValue" >
+<input type = "number" name = "minValue" required>
 </p>
 <p>and a maximun random value:
-<input type = "text" size = "20" name = "maxValue" >
+<input type = "number" name = "maxValue" required>
 </p>
 <input type = "submit" value = "Create a Random Table" >
 <input type = "reset" value = "Reset All Values" >
