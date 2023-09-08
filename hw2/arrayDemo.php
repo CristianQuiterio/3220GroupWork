@@ -11,9 +11,6 @@ $numRows = $_POST['numRows'];
 $numCols = $_POST['numCols'];
 $minValue = $_POST['minValue'];
 $maxValue = $_POST['maxValue'];
-//$exampleInteraction = $minValue * $maxValue;
-//print("<p>This page is under development.</p>");
-//print("<p>You entered $numRows, $numCols, $minValue, and $maxValue</p>");
 
 //Array
 $arrayData = [];
@@ -42,6 +39,7 @@ print "<h2>Row Stats </h2>";
 print "<table border = '.5'>";
 Print "<tr><th>Row</th><th>Sum</th><th>Average</th><th>Standard Deviation</th></tr>";
 foreach ($arrayData as $i => $numRows){
+  $rowNum = $i + 1;
   $sum = array_sum($numRows);
   $average = $sum / $numCols;
   $standardDev = 0;
@@ -50,9 +48,40 @@ foreach ($arrayData as $i => $numRows){
     $standardDev += pow($value - $average, 2);
   }
   $standardDev = sqrt($standardDev / $numCols);
-  
-
+  print "<td>$rowNum</td>";
+  print "<td>$sum</td>";
+  print "<td>$average</td>";
+  print "<td>$standardDev</td>";
+  print "</tr>";
 }
+print "</table>";
+
+//Create 3rd table and display if element is positive or negative
+print "<h2>Number Sign</h2>";
+print "<table border = '.5'>";
+foreach ($arrayData as $numRows){
+  //Relist the number
+  print "<tr>";
+  foreach ($numRows as $num){	
+    print "<td>".$num."</td>";
+  }
+  //Check for the sign
+  print "</tr><tr>";
+  foreach ($numRows as $num){
+	if($num>0){
+    print "<td>Positive</td>";
+	} 
+	elseif($num<0){
+	print "<td>Negative</td>";
+	} 
+	else {
+	print "<td>Zero</td>";
+	}	
+  }
+  
+  print "</tr>";
+}
+print "</table>";
 
 ?>
 </body>
