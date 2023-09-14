@@ -1,9 +1,20 @@
-<!DOCTYPE html>
 <html>
-<p>
-<form action = "Homework3(practice).php" method ="post">
-	<input type = "submit" value = "Create a Random Table" >
-</form>
-</p>
-</body>
+	<?php
+		$arrayFirst=[];
+		$firstNames=fopen("first_names.csv","r");
+		for ($i = 0; $i < 24; $i++){
+			$arrayFirst[$i]=fgets($firstNames);
+		}
+		fclose($firstNames);
+		
+		$arrayLast=[];
+		$lastNames=fopen("last_names.txt","r");
+		for ($i = 0; $i < 24; $i++){
+			$arrayLast[$i]=fgets($lastNames);
+		}
+		fclose($lastNames);
+		print("<p>$arrayFirst[2]</p>");
+		print("<p>$arrayLast[2]</p>");
+
+	?>
 </html>
