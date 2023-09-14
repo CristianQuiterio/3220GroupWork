@@ -16,5 +16,23 @@
 		print("<p>$arrayFirst[2]</p>");
 		print("<p>$arrayLast[2]</p>");
 
+
+		$arrayStreet=[];
+		$streetNames=fopen("street_names.txt","r");
+		for ($i = 0; $i < 5; $i++){
+			$arrayStreet[$i]=fgets($streetNames);
+		}
+		fclose($streetNames);
+		print("<p>$arrayStreet[1]</p>");
+
+
+		$arrayType=[];
+		$streetType=fopen("street_types.txt","r");
+		for ($i = 0; $i < 1; $i++){
+			$arrayType[$i]=fgets($streetType);
+		}
+		fclose($streetType);
+		print("<p>$arrayType[0]</p>");
+
 	?>
 </html>
