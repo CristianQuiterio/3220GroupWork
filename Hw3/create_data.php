@@ -3,8 +3,7 @@
 		//First Name
 		//Set up array to hold info and variables for read-in loop
 		$arrayFirst=[];
-		$numLines = 0;
-		
+		$numLines = 0;		
 		//Open/Close the file and get each line read in
 		$firstNames=fopen("first_names.csv","r");
 		while(!feof($firstNames)){
@@ -14,8 +13,7 @@
 				$numLines++;
 			}
 		}				
-		fclose($firstNames);
-		
+		fclose($firstNames);		
 		//Separate each line into individual names and add them to the name list
 		$nameNumber = 0;
 		foreach($firstNameLine as $nameLine){
@@ -55,7 +53,6 @@
 			}
 		}				
 		fclose($streetNames);
-		
 		//Separate each line into individual names and add them to the name list
 		$nameNumber = 0;
 		foreach($streetNameLine as $nameLine){
@@ -80,7 +77,6 @@
 			}
 		}				
 		fclose($streetType);
-		
 		//Separate each line into individual names and add them to the name list
 		$nameNumber = 0;
 		foreach($streetTypeLine as $nameLine){
@@ -95,7 +91,6 @@
 		//Set up array to hold info and variables for read-in loop
 		$arrayDomain=[];
 		$numLines = 0;
-		
 		//Open/Close the file and get each line read in
 		$domainNames=fopen("domains.txt","r");
 		while(!feof($domainNames)){
@@ -106,7 +101,6 @@
 			}
 		}				
 		fclose($domainNames);
-		
 		//Separate each line into individual names and add them to the name list
 		$nameNumber = 0;
 		foreach($domainNameLine as $nameLine){
@@ -118,46 +112,42 @@
 				$nameNumber++;
 			}
 		}
-		//Show that the names correctly separated - deleted later, just showing it works
+		
+		//Print the information in the arrays
+		print("<h2>First Names</h2>");
 		$check=0;
 		foreach($arrayFirst as $name){
-			print($check.$name."<br>");
+			print_r("<pre>".$name."</pre>");
 			$check++;
 		}
 
-		//Already separated in the list		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check = 0;
+		print("<h2>Last Names</h2>");
+		$check=0;
 		foreach($arrayLast as $name){
-			
-			print($check.$name."<br>");
+			print_r("<pre>".$name."</pre>");
 			$check++;
 		}
-		print("<p>$arrayFirst[0]</p>");
-		print("<p>$arrayLast[2]</p>");
 		
-		//Show that the names correctly separated - deleted later, just showing it works
+		print("<h2>Street Names</h2>");
 		$check=0;
 		foreach($arrayStreet as $name){
-			print($check.$name."<br>");
+			print_r("<pre>".$name."</pre>");
 			$check++;
 		}
-		print("<p>$arrayStreet[0]</p>");
 
-		//Show that the names correctly separated - deleted later, just showing it works
+		print("<h2>Street Types</h2>");
 		$check=0;
 		foreach($arrayType as $name){
-			print($check.$name."<br>");
-			$check++;
-		}
-		print("<p>$arrayType[0]</p>");		
-		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check=0;
-		foreach($arrayDomain as $name){
-			print($check.$name."<br>");
+			print_r("<pre>".$name."</pre>");
 			$check++;
 		}	
+		
+		print("<h2>Domain Names</h2>");
+		$check=0;
+		foreach($arrayDomain as $name){
+			print_r("<pre>".$name."</pre>");
+			$check++;
+		}
 		
 		//Arrays with the information that was read in: 
 		//$arrayFirst
