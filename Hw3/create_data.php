@@ -26,13 +26,6 @@
 			}
 		}
 		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check=0;
-		foreach($arrayFirst as $name){
-			print($check.$name."<br>");
-			$check++;
-		}
-		
 		//Last Name
 		//Set up array to hold info and variables for read-in loop
 		$arrayLast=[];
@@ -47,17 +40,6 @@
 			}
 		}				
 		fclose($lastNames);
-		
-		//Already separated in the list		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check = 0;
-		foreach($arrayLast as $name){
-			
-			print($check.$name."<br>");
-			$check++;
-		}
-		print("<p>$arrayFirst[0]</p>");
-		print("<p>$arrayLast[2]</p>");
 
 		//Street Name
 		//Set up array to hold info and variables for read-in loop
@@ -83,14 +65,6 @@
 				$nameNumber++;
 			}
 		}
-		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check=0;
-		foreach($arrayStreet as $name){
-			print($check.$name."<br>");
-			$check++;
-		}
-		print("<p>$arrayStreet[0]</p>");
 
 		//Street Type
 		//Set up array to hold info and variables for read-in loop
@@ -116,14 +90,6 @@
 				$nameNumber++;
 			}
 		}
-		
-		//Show that the names correctly separated - deleted later, just showing it works
-		$check=0;
-		foreach($arrayType as $name){
-			print($check.$name."<br>");
-			$check++;
-		}
-		print("<p>$arrayType[0]</p>");
 
 		//Domain Name
 		//Set up array to hold info and variables for read-in loop
@@ -152,6 +118,39 @@
 				$nameNumber++;
 			}
 		}
+		//Show that the names correctly separated - deleted later, just showing it works
+		$check=0;
+		foreach($arrayFirst as $name){
+			print($check.$name."<br>");
+			$check++;
+		}
+
+		//Already separated in the list		
+		//Show that the names correctly separated - deleted later, just showing it works
+		$check = 0;
+		foreach($arrayLast as $name){
+			
+			print($check.$name."<br>");
+			$check++;
+		}
+		print("<p>$arrayFirst[0]</p>");
+		print("<p>$arrayLast[2]</p>");
+		
+		//Show that the names correctly separated - deleted later, just showing it works
+		$check=0;
+		foreach($arrayStreet as $name){
+			print($check.$name."<br>");
+			$check++;
+		}
+		print("<p>$arrayStreet[0]</p>");
+
+		//Show that the names correctly separated - deleted later, just showing it works
+		$check=0;
+		foreach($arrayType as $name){
+			print($check.$name."<br>");
+			$check++;
+		}
+		print("<p>$arrayType[0]</p>");		
 		
 		//Show that the names correctly separated - deleted later, just showing it works
 		$check=0;
@@ -160,5 +159,19 @@
 			$check++;
 		}	
 		
+		//Arrays with the information that was read in: 
+		//$arrayFirst
+		//$arrayLast
+		//$arrayStreet
+		//$arrayType
+		//$arrayDomain
+		
+		//Randomized Info 
+		
+		
+		//Table
+		
+		
+		//Output Info to a File
 	?>
 </html>
