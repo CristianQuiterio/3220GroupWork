@@ -1,0 +1,91 @@
+SamanthaPitt
+:4044 Antofagasta Lane:samantha.pitt
+@gmail.com
+SharonVest
+:9531 Hanoi Street:sharon.vest
+@hotmail.com
+HollyMcCarter
+:461 Idfu
+ Street:holly.mccarter
+@utc.edu
+ClaireLombardi
+:6422 Iligan
+ Way:claire.lombardi
+@facebook.com
+CraigShoemaker
+:136 Kowloon
+ Lane:craig.shoemaker
+@exchange.com
+JosephGrey
+:4784 Hino Way:joseph.grey
+@google.com
+
+SallyHannon
+:4055 Munger Lane:sally.hannon
+@hotmail.com
+Leslie
+Banda
+:1206 Iligan
+ Drive:leslie
+.banda
+@gmail.com
+JosephOlvera
+:5319 Antofagasta Lane:joseph.olvera
+@exchange.com
+DavidGrey
+:2157 Lancaster Avenue:david.grey
+@exchange.com
+RobertGafney
+:3508 Fukuyama
+ Loop
+:robert.gafney
+@gmail.com
+DavidLombardi
+:6761 Valencia Parkway:david.lombardi
+@exchange.com
+SharonDuggan
+:1607 Workhaven Circle:sharon.duggan
+@yahoo.com
+AliciaPitt
+:2024 Tama Manor:alicia.pitt
+@yahoo.com
+ErinGardiner
+:2754 Anapolis Way:erin.gardiner
+@yahoo.com
+SallyBanda
+:2189 Hanoi Parkway:sally.banda
+@yahoo.com
+DavidLumpkin
+:4114 Toulan Loop
+:david.lumpkin
+@google.com
+
+SallyGruber
+:6382 Brest Drive:sally.gruber
+@chattstate.edu
+JeanOglesby
+:5994 Imus Lane:jean.oglesby
+@facebook.com
+ConradOglesby
+:4764 Mandaluyong Drive:conrad.oglesby
+@hotmail.com
+AliciaLarue
+:2664 Iligan
+ Avenue:alicia.larue
+@chattstate.edu
+RussellLombardi
+:685 Santiago Street:russell.lombardi
+@google.com
+
+SallyShoemaker
+:4749 Antofagasta Drive:sally.shoemaker
+@utc.edu
+JamesGrey
+:9605 Garland
+ Loop
+:james.grey
+@utc.edu
+SharonGrey
+:8092 Isesaki Boulevard:sharon.grey
+@google.com
+

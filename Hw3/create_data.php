@@ -115,46 +115,29 @@
 		
 		//Print the information in the arrays
 		print("<h2>First Names</h2>");
-		$check=0;
 		foreach($arrayFirst as $name){
 			print_r("<pre>".$name."</pre>");
-			$check++;
 		}
 
 		print("<h2>Last Names</h2>");
-		$check=0;
 		foreach($arrayLast as $name){
 			print_r("<pre>".$name."</pre>");
-			$check++;
 		}
 		
 		print("<h2>Street Names</h2>");
-		$check=0;
 		foreach($arrayStreet as $name){
 			print_r("<pre>".$name."</pre>");
-			$check++;
 		}
 
 		print("<h2>Street Types</h2>");
-		$check=0;
 		foreach($arrayType as $name){
 			print_r("<pre>".$name."</pre>");
-			$check++;
 		}	
 		
 		print("<h2>Domain Names</h2>");
-		$check=0;
 		foreach($arrayDomain as $name){
 			print_r("<pre>".$name."</pre>");
-			$check++;
 		}
-		
-		//Arrays with the information that was read in: 
-		//$arrayFirst
-		//$arrayLast
-		//$arrayStreet
-		//$arrayType
-		//$arrayDomain
 		
 		//Randomized Info 
 		$customerData = [];
@@ -192,14 +175,22 @@
 		//Output Info to a File
 		
 		print("<h2>Customer Info</h2>");
-		$check=0;
 		foreach($customerData as $name){
 			
 			print_r("<pre>".$name['First Name']."</pre>");
 			print_r("<pre>".$name['Last Name']."</pre>");
 			print_r("<pre>".$name['Email']."</pre>");
 			print_r("<pre>".$name['Address']."</pre>");
-			$check++;
 		}
+		
+		$customerDataFile = fopen("customerData.txt", "w");
+		foreach($customerData as $name){
+			fputs($customerDataFile, $name['First Name'].
+									 $name['Last Name'].":".
+									 $name['Address'].":".
+									 $name['Email']."\n");
+		}
+		fclose($customerDataFile);
+		
 	?>
 </html>
