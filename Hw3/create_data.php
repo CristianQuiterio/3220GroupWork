@@ -187,7 +187,14 @@
 		}
 		
 		//Table
-		
+		foreach ($customerData as $customer) {
+			print '<tr>';
+			print '<td>' . $customer['First Name'] . '</td>';
+			print '<td>' . $customer['Last Name'] . '</td>';
+			print '<td>' . $customer['Address'] . '</td>';
+			print '<td>' . $customer['Email'] . '</td>';
+			print '</tr>';
+		}
 		
 		//Output Info to a File
 		
