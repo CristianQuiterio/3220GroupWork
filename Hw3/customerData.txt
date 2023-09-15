@@ -1,57 +1,25 @@
-Roger:Vest
-:5570 Hidalgo Boulevard:roger.vest
-@utc.eduScott:Lombardi
-:9795 Toulan Parkway:scott.lombardi
-@google.com
-Raymond:Shoemaker
-:7823 Kabul Parkway:raymond.shoemaker
-@exchange.comChris:Wofford
-:3983 Purnia Loop
-:chris.wofford
-@chattstate.eduJean:Wofford
-:9544 Purnia Boulevard:jean.wofford
-@facebook.comJean:McAlister
-:4883 Santiago Avenue:jean.mcalister
-@yahoo.comRaymond:Wofford
-:9524 Cam Ranh Avenue:raymond.wofford
-@yahoo.comChris:Cromwell
-:1145 Santiago Street:chris.cromwell
-@chattstate.eduRoger:Duggan
-:7017 Valencia Avenue:roger.duggan
-@google.com
-Russell:Gafney
-:8868 Bisling Circle:russell.gafney
-@chattstate.eduHolly:Gunderson
-:1787 Cam Ranh Manor:holly.gunderson
-@yahoo.comHolly:Vest
-:3623 Workhaven Manor:holly.vest
-@exchange.comSamantha:Duggan
-:6782 Bisling Parkway:samantha.duggan
-@gmail.comChris:Oglesby
-:4985 Duisberg Boulevard:chris.oglesby
-@facebook.comJean:Olvera
-:3374 Isesaki Lane:jean.olvera
-@google.com
-Conrad:Banda
-:1746 Cam Ranh Circle:conrad.banda
-@hotmail.comAlicia:Gruber
-:2495 Halifax Lane:alicia.gruber
-@hotmail.comRaymond:Grey
-:8794 Korolev Drive:raymond.grey
-@google.com
-Holly:Lumpkin
-:8998 Isesaki Way:holly.lumpkin
-@facebook.comJessee:Lumpkin
-:3682 Purnia Boulevard:jessee.lumpkin
-@gmail.comPatricia:Shoemaker
-:3730 Okara Manor:patricia.shoemaker
-@utc.eduAmanada:Pitt
-:1033 Hanoi Avenue:amanada.pitt
-@exchange.comJames:Eggleston
-:802 Idfu
- Parkway:james.eggleston
-@facebook.comJoseph:Gardiner
-:5235 Hino Street:joseph.gardiner
-@exchange.comPatricia:Hannon
-:6342 Mandaluyong Avenue:patricia.hannon
-@utc.edu
+Holly:Hannon:9395 Santiago Loop:holly.hannon@gmail.com
+Roger:Gruber:9003 Toulan Circle:roger.gruber@utc.edu
+James:Vest:9822 Munger Way:james.vest@gmail.com
+Robert:Pitt:5372 Munger Boulevard:robert.pitt@chattstate.edu
+Erin:Gruber:8803 Loja Drive:erin.gruber@facebook.com
+David:Vest:5514 Fukuyama Drive:david.vest@hotmail.com
+Claire:Olvera:3769 Duisberg Parkway:claire.olvera@yahoo.com
+Amanada:McCarter:2601 Lancaster Street:amanada.mccarter@exchange.com
+David:Wofford:6397 Hino Avenue:david.wofford@exchange.com
+Alicia:McAlister:537 Lancaster Circle:alicia.mcalister@yahoo.com
+Jessee:Duggan:1724 Halifax Loop:jessee.duggan@facebook.com
+Scott:Gunderson:8507 Imus Circle:scott.gunderson@hotmail.com
+Holly:Vest:28 Loja Street:holly.vest@hotmail.com
+Sally:Smith:9788 Isesaki Way:sally.smith@chattstate.edu
+Fred:Hannon:273 Duisberg Loop:fred.hannon@google.com
+Raymond:McCarter:3641 Halifax Street:raymond.mccarter@chattstate.edu
+Fred:McAlister:8606 Isesaki Boulevard:fred.mcalister@google.com
+James:Swanson:1826 Joliet Way:james.swanson@facebook.com
+Patricia:Oglesby:1848 Antofagasta Lane:patricia.oglesby@hotmail.com
+James:Olvera:8742 Antofagasta Avenue:james.olvera@utc.edu
+Erin:McAlister:6740 Mandaluyong Manor:erin.mcalister@gmail.com
+Conrad:Gafney:3615 Munger Drive:conrad.gafney@exchange.com
+Chris:Smith:2194 Idfu Street:chris.smith@facebook.com
+Chris:Burleson:2522 Tama Avenue:chris.burleson@hotmail.com
+Scott:Cromwell:1596 Hidalgo Manor:scott.cromwell@utc.edu

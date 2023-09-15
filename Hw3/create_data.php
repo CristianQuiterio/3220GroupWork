@@ -9,6 +9,8 @@
 		while(!feof($firstNames)){
 			$candidateLine = fgets($firstNames);
 			if($candidateLine != ""){
+				$candidateLine = str_replace("\r", "", $candidateLine);
+				$candidateLine = str_replace("\n", "", $candidateLine);
 				$firstNameLine[$numLines] = $candidateLine;
 				$numLines++;
 			}
@@ -33,6 +35,8 @@
 		while(!feof($lastNames)){		
 			$candidateLine = fgets($lastNames);
 			if($candidateLine != ""){
+				$candidateLine = str_replace("\r", "", $candidateLine);
+				$candidateLine = str_replace("\n", "", $candidateLine);
 				$arrayLast[$numLines] = $candidateLine;
 				$numLines++;
 			}
@@ -48,6 +52,8 @@
 		while(!feof($streetNames)){
 			$candidateLine = fgets($streetNames);
 			if($candidateLine != ""){
+				$candidateLine = str_replace("\r", "", $candidateLine);
+				$candidateLine = str_replace("\n", "", $candidateLine);
 				$streetNameLine[$numLines] = $candidateLine;
 				$numLines++;
 			}
@@ -72,6 +78,8 @@
 		while(!feof($streetType)){
 			$candidateLine = fgets($streetType);
 			if($candidateLine != ""){
+				$candidateLine = str_replace("\r", "", $candidateLine);
+				$candidateLine = str_replace("\n", "", $candidateLine);
 				$streetTypeLine[$numLines] = $candidateLine;
 				$numLines++;
 			}
@@ -96,6 +104,8 @@
 		while(!feof($domainNames)){
 			$candidateLine = fgets($domainNames);
 			if($candidateLine != ""){
+				$candidateLine = str_replace("\r", "", $candidateLine);
+				$candidateLine = str_replace("\n", "", $candidateLine);
 				$domainNameLine[$numLines] = $candidateLine;
 				$numLines++;
 			}
@@ -114,30 +124,18 @@
 		}
 		
 		//Print the information in the arrays
+		print("<pre>");
 		print("<h2>First Names</h2>");
-		foreach($arrayFirst as $name){
-			print_r("<pre>".$name."</pre>");
-		}
-
+		print_r($arrayFirst);
 		print("<h2>Last Names</h2>");
-		foreach($arrayLast as $name){
-			print_r("<pre>".$name."</pre>");
-		}
-		
+		print_r($arrayLast);
 		print("<h2>Street Names</h2>");
-		foreach($arrayStreet as $name){
-			print_r("<pre>".$name."</pre>");
-		}
-
+		print_r($arrayStreet);
 		print("<h2>Street Types</h2>");
-		foreach($arrayType as $name){
-			print_r("<pre>".$name."</pre>");
-		}	
-		
+		print_r($arrayType);
 		print("<h2>Domain Names</h2>");
-		foreach($arrayDomain as $name){
-			print_r("<pre>".$name."</pre>");
-		}
+		print_r($arrayDomain);
+		echo("</pre>");
 		
 		//Randomized Info 
 		$customerData = [];
@@ -170,6 +168,7 @@
 		}
 		
 		//Table
+		print("<h2>Customer Data</h2>");
 		print '<table border="1">';
 		print '<tr>';
 		print '<th>First Name</th>';
@@ -190,7 +189,7 @@
 		//Output Info to a File
 		$customerDataFile = fopen("customerData.txt", "w");
 		foreach($customerData as $name){
-			fputs($customerDataFile, $name['First Name'].":".$name['Last Name'].":".$name['Address'].":".$name['Email']);
+			fputs($customerDataFile, $name['First Name'].":".$name['Last Name'].":".$name['Address'].":".$name['Email']."\n");
 		}
 		fclose($customerDataFile);
 		
