@@ -157,21 +157,24 @@
 		//$arrayDomain
 		
 		//Randomized Info 
-		$customerData = []
-		$usedNames = []
+		$customerData = [];
+		$usedNames = [];
+		$usedAddress = [];
 
 		While (count($customerData) < 25){
 			$firstName = $arrayFirst[array_rand($arrayFirst)];
 			$lastName = $arrayLast[array_rand($arrayLast)];
 			$fullName = $firstName. ' ' . $lastName;
+			$street = rand(1,9999) . ' ' . $arrayStreet[array_rand($arrayStreet)] . ' ' . $arrayType[array_rand($arrayType)];
 
 			//Check to see if the names are unique to avoid duplicates
-			if (!in_array($fullName, $usedNames)){
+			if (!in_array($fullName, $usedNames) && !in_array($street, $usedAddress)){
 				$usedNames[] = $fullName;
+				$usedAddress[] = $street;
 
 				$domain = $arrayDomain[array_rand($arrayDomain)];
 				$email = strtolower($firstName) . '.' . strtolower($lastName) . '@' . $domain;
-				$street = $arrayStreet[array_rand($arrayStreet)] . ' ' . $arrayType[array_rand($arrayType)];
+				
 
 				//add the random data to the customerData array
 				$customerData[] = [
@@ -187,5 +190,16 @@
 		
 		
 		//Output Info to a File
+		
+		print("<h2>Customer Info</h2>");
+		$check=0;
+		foreach($customerData as $name){
+			
+			print_r("<pre>".$name['First Name']."</pre>");
+			print_r("<pre>".$name['Last Name']."</pre>");
+			print_r("<pre>".$name['Email']."</pre>");
+			print_r("<pre>".$name['Address']."</pre>");
+			$check++;
+		}
 	?>
 </html>
