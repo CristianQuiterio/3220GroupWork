@@ -157,7 +157,31 @@
 		//$arrayDomain
 		
 		//Randomized Info 
-		
+		$customerData = []
+		$usedNames = []
+
+		While (count($customerData) < 25){
+			$firstName = $arrayFirst[array_rand($arrayFirst)];
+			$lastName = $arrayLast[array_rand($arrayLast)];
+			$fullName = $firstName. ' ' . $lastName;
+
+			//Check to see if the names are unique to avoid duplicates
+			if (!in_array($fullName, $usedNames)){
+				$usedNames[] = $fullName;
+
+				$domain = $arrayDomain[array_rand($arrayDomain)];
+				$email = strtolower($firstName) . '.' . strtolower($lastName) . '@' . $domain;
+				$street = $arrayStreet[array_rand($arrayStreet)] . ' ' . $arrayType[array_rand($arrayType)];
+
+				//add the random data to the customerData array
+				$customerData[] = [
+					'First Name' => $firstName,
+					'Last Name' => $lastName,
+					'Email' => $email,
+					'Address' => $street,
+				];
+			}
+		}
 		
 		//Table
 		
