@@ -190,10 +190,7 @@
 		//Output Info to a File
 		$customerDataFile = fopen("customerData.txt", "w");
 		foreach($customerData as $name){
-			fputs($customerDataFile, $name['First Name'].
-									 $name['Last Name'].":".
-									 $name['Address'].":".
-									 $name['Email']."\n");
+			fputs($customerDataFile, $name['First Name'].":".$name['Last Name'].":".$name['Address'].":".$name['Email']);
 		}
 		fclose($customerDataFile);
 		

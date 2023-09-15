@@ -1,86 +1,57 @@
-AmanadaSwanson
-:8560 Lillydale Parkway:amanada.swanson
-@chattstate.edu
-JosephShoemaker
-:317 Tama Way:joseph.shoemaker
-@facebook.com
-AllisonLarue
-:743 Toulan Circle:allison.larue
-@facebook.com
-HollyVest
-:89 Iligan
- Parkway:holly.vest
-@hotmail.com
-RobertGunderson
-:7798 Aurora
- Boulevard:robert.gunderson
-@chattstate.edu
-RogerPitt
-:5617 Idfu
- Lane:roger.pitt
-@yahoo.com
-RussellMcCarter
-:1595 Iligan
- Boulevard:russell.mccarter
-@chattstate.edu
-JeanHannon
-:9985 Lillydale Circle:jean.hannon
-@exchange.com
-SamanthaLarue
-:3885 Fukuyama
- Way:samantha.larue
-@chattstate.edu
-CraigLarue
-:6658 Valencia Manor:craig.larue
-@utc.edu
-SamanthaMcCarter
-:5708 Mandaluyong Manor:samantha.mccarter
+Roger:Vest
+:5570 Hidalgo Boulevard:roger.vest
+@utc.eduScott:Lombardi
+:9795 Toulan Parkway:scott.lombardi
 @google.com
-
-RogerLumpkin
-:2266 Workhaven Way:roger.lumpkin
-@hotmail.com
-DavidBurleson
-:451 Alleppey Manor:david.burleson
-@hotmail.com
-HollyBanda
-:6412 Alleppey Drive:holly.banda
+Raymond:Shoemaker
+:7823 Kabul Parkway:raymond.shoemaker
+@exchange.comChris:Wofford
+:3983 Purnia Loop
+:chris.wofford
+@chattstate.eduJean:Wofford
+:9544 Purnia Boulevard:jean.wofford
+@facebook.comJean:McAlister
+:4883 Santiago Avenue:jean.mcalister
+@yahoo.comRaymond:Wofford
+:9524 Cam Ranh Avenue:raymond.wofford
+@yahoo.comChris:Cromwell
+:1145 Santiago Street:chris.cromwell
+@chattstate.eduRoger:Duggan
+:7017 Valencia Avenue:roger.duggan
 @google.com
-
-ChrisGafney
-:4583 Lancaster Avenue:chris.gafney
-@facebook.com
-ScottSwanson
-:6189 Anapolis Manor:scott.swanson
-@yahoo.com
-ErinLombardi
-:1184 Botshebelo Boulevard:erin.lombardi
-@utc.edu
-RobertChisholm
-:1602 Brest Boulevard:robert.chisholm
-@chattstate.edu
-CraigMcAlister
-:1221 Anapolis Loop
-:craig.mcalister
-@facebook.com
-JeanChisholm
-:7936 Joliet Street:jean.chisholm
-@gmail.com
-SharonLombardi
-:6622 Okara Way:sharon.lombardi
-@gmail.com
-ChrisWofford
-:398 Inegl Manor:chris.wofford
-@yahoo.com
-DavidSwanson
-:6877 Garland
- Street:david.swanson
+Russell:Gafney
+:8868 Bisling Circle:russell.gafney
+@chattstate.eduHolly:Gunderson
+:1787 Cam Ranh Manor:holly.gunderson
+@yahoo.comHolly:Vest
+:3623 Workhaven Manor:holly.vest
+@exchange.comSamantha:Duggan
+:6782 Bisling Parkway:samantha.duggan
+@gmail.comChris:Oglesby
+:4985 Duisberg Boulevard:chris.oglesby
+@facebook.comJean:Olvera
+:3374 Isesaki Lane:jean.olvera
 @google.com
-
-AmanadaCromwell
-:1855 Antofagasta Lane:amanada.cromwell
+Conrad:Banda
+:1746 Cam Ranh Circle:conrad.banda
+@hotmail.comAlicia:Gruber
+:2495 Halifax Lane:alicia.gruber
+@hotmail.comRaymond:Grey
+:8794 Korolev Drive:raymond.grey
+@google.com
+Holly:Lumpkin
+:8998 Isesaki Way:holly.lumpkin
+@facebook.comJessee:Lumpkin
+:3682 Purnia Boulevard:jessee.lumpkin
+@gmail.comPatricia:Shoemaker
+:3730 Okara Manor:patricia.shoemaker
+@utc.eduAmanada:Pitt
+:1033 Hanoi Avenue:amanada.pitt
+@exchange.comJames:Eggleston
+:802 Idfu
+ Parkway:james.eggleston
+@facebook.comJoseph:Gardiner
+:5235 Hino Street:joseph.gardiner
+@exchange.comPatricia:Hannon
+:6342 Mandaluyong Avenue:patricia.hannon
 @utc.edu
-SharonLarue
-:9030 Aurora
- Drive:sharon.larue
-@facebook.com
