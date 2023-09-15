@@ -170,7 +170,22 @@
 		}
 		
 		//Table
-		
+		print '<table border="1">';
+		print '<tr>';
+		print '<th>First Name</th>';
+		print '<th>Last Name</th>';
+		print '<th>Street</th>';
+		print '<th>Email</th>';
+		print '</tr>';
+		//Fill the table with data from customerData[]
+		foreach ($customerData as $customer) {
+			print '<tr>';
+			print '<td>' . $customer['First Name'] . '</td>';
+			print '<td>' . $customer['Last Name'] . '</td>';
+			print '<td>' . $customer['Address'] . '</td>';
+			print '<td>' . $customer['Email'] . '</td>';
+			print '</tr>';
+		}
 		
 		//Output Info to a File
 		
