@@ -124,7 +124,41 @@
 			$check++;
 		}
 		print("<p>$arrayType[0]</p>");
+
+		//Domain Name
+		//Set up array to hold info and variables for read-in loop
+		$arrayDomain=[];
+		$numLines = 0;
 		
+		//Open/Close the file and get each line read in
+		$domainNames=fopen("domains.txt","r");
+		while(!feof($domainNames)){
+			$candidateLine = fgets($domainNames);
+			if($candidateLine != ""){
+				$domainNameLine[$numLines] = $candidateLine;
+				$numLines++;
+			}
+		}				
+		fclose($domainNames);
+		
+		//Separate each line into individual names and add them to the name list
+		$nameNumber = 0;
+		foreach($domainNameLine as $nameLine){
+			$nameArray = explode(".", $nameLine);
+			foreach($nameArray as $name){
+				if(($nameNumber%2)== 0){
+					$arrayDomain[$nameNumber] = $name.".".$nameArray[$nameNumber+1];
+				}
+				$nameNumber++;
+			}
+		}
+		
+		//Show that the names correctly separated - deleted later, just showing it works
+		$check=0;
+		foreach($arrayDomain as $name){
+			print($check.$name."<br>");
+			$check++;
+		}	
 		
 	?>
 </html>
