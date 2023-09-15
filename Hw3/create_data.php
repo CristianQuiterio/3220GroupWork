@@ -188,16 +188,6 @@
 		}
 		
 		//Output Info to a File
-		
-		print("<h2>Customer Info</h2>");
-		foreach($customerData as $name){
-			
-			print_r("<pre>".$name['First Name']."</pre>");
-			print_r("<pre>".$name['Last Name']."</pre>");
-			print_r("<pre>".$name['Email']."</pre>");
-			print_r("<pre>".$name['Address']."</pre>");
-		}
-		
 		$customerDataFile = fopen("customerData.txt", "w");
 		foreach($customerData as $name){
 			fputs($customerDataFile, $name['First Name'].
