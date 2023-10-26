@@ -1,0 +1,5 @@
+wood
+stainless steel
+plastic
+rubber
+leather
