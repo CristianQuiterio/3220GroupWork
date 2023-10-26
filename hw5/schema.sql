@@ -1,7 +1,7 @@
-drop schema
-Create Schema
+drop schema if exists SuperStore;
+CREATE SCHEMA if not exists SuperStore;
 
-Use
+USE SuperStore;
 
 CREATE TABLE `address` (
   `address_id` int(20) NOT NULL AUTO_INCREMENT,
@@ -24,24 +24,30 @@ CREATE TABLE `customer` (
 );
 
 CREATE TABLE `order` (
-  `customer_id` int(20) NOT NULL auto_increment,
-  `first_name` varchar(100) DEFAULT NULL,
-  `last_name` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `phone` varchar(12) DEFAULT NULL,
+  `order_id` int(20) NOT NULL AUTO_INCREMENT,
+  `customer_id` int(20) DEFAULT NULL,
   `address_id` int(20) DEFAULT NULL,
   PRIMARY KEY (`order_id`),
-  FOREIGN KEY (`customer_id`) REFERENCES `customer`(`customer_id`)
+  FOREIGN KEY (`customer_id`) REFERENCES `customer`(`customer_id`),
   FOREIGN KEY (`address_id`) REFERENCES `address`(`address_id`)
 );
 
 CREATE TABLE `product` (
-  `product_id` int(20) NOT NULL auto_increment,
+  `product_id` int(20) NOT NULL AUTO_INCREMENT,
   `product_name` varchar(100) DEFAULT NULL,
-  `description` varchar(100) DEFAULT NULL,
-  `weight` varchar(100) DEFAULT NULL,
-  `base_cost` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`product_id`),
+  `description` varchar(1000) DEFAULT NULL,
+  `weight` int(50) DEFAULT NULL,
+  `base_cost` int(50) DEFAULT NULL,
+  PRIMARY KEY (`product_id`)
+);
+
+CREATE TABLE `order_item` (
+  `order_id` int(20) DEFAULT NULL,
+  `product_id` int(20) DEFAULT NULL,
+  `quantity` int(50) DEFAULT NULL,
+  `price` int (50) DEFAULT NULL,
+  FOREIGN KEY (`order_id`) REFERENCES `order`(`order_id`),
+  FOREIGN KEY (`product_id`) REFERENCES `product`(`product_id`)
 );
 
 CREATE TABLE `warehouse` (
@@ -50,13 +56,6 @@ CREATE TABLE `warehouse` (
   `address_id` int(20) DEFAULT NULL,
   PRIMARY KEY (`warehouse_id`),
   FOREIGN KEY (`address_id`) REFERENCES `address`(`address_id`)
-);
-
-CREATE TABLE `order_item` (
-  `quantity` int(20) NOT NULL auto_increment,
-  `price` varchar(100) DEFAULT NULL,
-  FOREIGN KEY (`order_id`) REFERENCES `order`(`order_id`)
-  FOREIGN KEY (`product_id`) REFERENCES `product`(`product_id`)
 );
 
 CREATE TABLE `product_warehouse` (
