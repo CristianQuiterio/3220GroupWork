@@ -42,7 +42,24 @@ foreach($firstNameLine as $nameLine){
 		$nameNumber++;
 	}
 }
-	
+
+//Domain Name
+//Set up array to hold info and variables for read-in loop
+$arrayDomain=[];
+$numLines = 0;
+//Open/Close the file and get each line read in
+$domainNames=fopen("domains.txt","r");
+while(!feof($domainNames)){
+	$candidateLine = fgets($domainNames);
+	if($candidateLine != ""){
+		$candidateLine = str_replace("\r", "", $candidateLine);
+		$candidateLine = str_replace("\n", "", $candidateLine);
+		$domainNameLine[$numLines] = $candidateLine;
+		$numLines++;
+	}
+}				
+fclose($domainNames);
+
 //address
 for ($i = 1; $i <= 150; $i++) {
     $street = getRandomLineFromFile('streets.txt') . " Street";
@@ -54,7 +71,7 @@ for ($i = 1; $i <= 150; $i++) {
 //customer
 
 for ($i = 1; $i <= 100; $i++) {
-    $firtstName = getRandomLineFromFile('.txt');
+    $firtstName = ;
     $lastName = getRandomLineFromFile('.txt');
     $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firtstName','$lastName','','')";
     $conn->query($sql);}
