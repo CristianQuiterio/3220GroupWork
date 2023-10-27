@@ -43,19 +43,35 @@ foreach($firstNameLine as $nameLine){
 		$nameNumber++;
 	}
 }
-	
-//address	
-//customer
 
-for ($i = 1; $i <= 100; $i++) {
-    $customerID = rand(10000,99999);
-    $firtstName = getRandomLineFromFile('.txt');
-    $lasttName = getRandomLineFromFile('.txt');
-    $sql = "INSERT INTO address () VALUES ()";
-    $conn->query($sql);}
+//Domain Name
+//Set up array to hold info and variables for read-in loop
+$arrayDomain=[];
+$numLines = 0;
+//Open/Close the file and get each line read in
+$domainNames=fopen("domains.txt","r");
+while(!feof($domainNames)){
+	$candidateLine = fgets($domainNames);
+	if($candidateLine != ""){
+		$candidateLine = str_replace("\r", "", $candidateLine);
+		$candidateLine = str_replace("\n", "", $candidateLine);
+		$domainNameLine[$numLines] = $candidateLine;
+		$numLines++;
+	}
+}				
+fclose($domainNames);
+$nameNumber = 0;
+foreach($domainNameLine as $nameLine){
+	$nameArray = explode(".", $nameLine);
+	foreach($nameArray as $name){
+		if(($nameNumber%2)== 0){
+			$arrayDomain[$nameNumber] = $name.".".$nameArray[$nameNumber+1];
+		}
+		$nameNumber++;
+	}
+}
 
-
-
+//address
 for ($i = 1; $i <= 150; $i++) {
     $street = getRandomLineFromFile('streets.txt') . " Street";
     $city = getRandomLineFromFile('cities.txt');
@@ -63,8 +79,21 @@ for ($i = 1; $i <= 150; $i++) {
     $zip = rand(10000, 99999);
     $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
     $conn->query($sql);}
-	
-	//order
+
+//customer
+
+for ($i = 1; $i <= 100; $i++) {
+    $firtstName = array_rand($arrayFirst);
+    $domain = array_rand($arrayDomain);
+    $lastName = getRandomLineFromFile('.txt');
+    $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firtstName','$lastName','','')";
+    $conn->query($sql);}
+
+
+
+
+//order
+
 
 	//product
 
