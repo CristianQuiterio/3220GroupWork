@@ -59,6 +59,16 @@ while(!feof($domainNames)){
 	}
 }				
 fclose($domainNames);
+$nameNumber = 0;
+foreach($domainNameLine as $nameLine){
+	$nameArray = explode(".", $nameLine);
+	foreach($nameArray as $name){
+		if(($nameNumber%2)== 0){
+			$arrayDomain[$nameNumber] = $name.".".$nameArray[$nameNumber+1];
+		}
+		$nameNumber++;
+	}
+}
 
 //address
 for ($i = 1; $i <= 150; $i++) {
