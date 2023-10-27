@@ -17,6 +17,50 @@ function getRandomLineFromFile($filename) {
     return $lines[array_rand($lines)];
 }
 
+//First Name
+//Set up array to hold info and variables for read-in loop
+$arrayFirst=[];
+$numLines = 0;		
+//Open/Close the file and get each line read in
+$firstNames=fopen("first_names.csv","r");
+while(!feof($firstNames)){
+	$candidateLine = fgets($firstNames);
+	if($candidateLine != ""){
+		$candidateLine = str_replace("\r", "", $candidateLine);
+		$candidateLine = str_replace("\n", "", $candidateLine);
+		$firstNameLine[$numLines] = $candidateLine;
+		$numLines++;
+	}
+}				
+fclose($firstNames);		
+//Separate each line into individual names and add them to the name list
+$nameNumber = 0;
+foreach($firstNameLine as $nameLine){
+	$nameArray = explode(",", $nameLine);
+	foreach($nameArray as $name){
+		$arrayFirst[$nameNumber] = $name;
+		$nameNumber++;
+	}
+}
+		
+//Last Name
+//Set up array to hold info and variables for read-in loop
+$arrayLast=[];
+$numLines = 0;
+//Open/Close the file and get each line read in
+$lastNames=fopen("last_names.txt","r");
+while(!feof($lastNames)){		
+	$candidateLine = fgets($lastNames);
+	if($candidateLine != ""){
+		$candidateLine = str_replace("\r", "", $candidateLine);
+		$candidateLine = str_replace("\n", "", $candidateLine);
+		$arrayLast[$numLines] = $candidateLine;
+		$numLines++;
+	}
+}				
+fclose($lastNames);
+
+
 for ($i = 1; $i <= 150; $i++) {
     $street = getRandomLineFromFile('streets.txt') . " Street";
     $city = getRandomLineFromFile('cities.txt');
