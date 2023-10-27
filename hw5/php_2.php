@@ -11,6 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 // Function to read random lines from a text file
 function getRandomLineFromFile($filename) {
     $lines = file($filename, FILE_IGNORE_NEW_LINES);
@@ -63,9 +64,9 @@ for ($i = 1; $i <= 150; $i++) {
     $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
     $conn->query($sql);}
 	
-//order
+	//order
 
-//product
+	//product
 
 for ($i = 1; $i <= 750; $i++) {
     $productName = getRandomLineFromFile('nouns.txt');
@@ -83,7 +84,14 @@ for ($i = 1; $i <= 750; $i++) {
 	
 	//order_item
 	//warehouse
-	//product_warehouse
 	
+	//product_warehouse
+	$DataFile = fopen("data.sql", "w");
+	for($i = 0;$i < 25; $i++){
+		for($j = 0;$j < 50; $j++){
+			fputs("INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")");
+		}
+	}
+	fclose($DataFile);
 }
 
