@@ -128,7 +128,7 @@ for ($i = 1; $i <= 750; $i++) {
 	fclose($ReadFile);
 	
 	//write to data.sql
-	$DataFile = fopen("data.sql", "w");
+	$DataFile = fopen("data.sql", "a");
 	for($i = 0;$i < 25; $i++){
 		fputs($DataFile, "INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames[$i].", ".$i.")");
 	}
@@ -139,7 +139,7 @@ for ($i = 1; $i <= 750; $i++) {
 	//product_warehouse
 	//no unique items, just get random integers as product keys
 	//write to data.sql
-	$DataFile = fopen("data.sql", "w");
+	$DataFile = fopen("data.sql", "a");
 	for($i = 0;$i < 25; $i++){
 		for($j = 0;$j < 50; $j++){
 			fputs($DataFile, "INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")");
