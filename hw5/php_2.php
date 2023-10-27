@@ -43,7 +43,14 @@ foreach($firstNameLine as $nameLine){
 	}
 }
 	
-//address	
+//address
+for ($i = 1; $i <= 150; $i++) {
+    $street = getRandomLineFromFile('streets.txt') . " Street";
+    $city = getRandomLineFromFile('cities.txt');
+    $state = getRandomLineFromFile('states.txt');
+    $zip = rand(10000, 99999);
+    $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
+    $conn->query($sql);}
 //customer
 
 for ($i = 1; $i <= 100; $i++) {
@@ -55,14 +62,7 @@ for ($i = 1; $i <= 100; $i++) {
 
 
 
-for ($i = 1; $i <= 150; $i++) {
-    $street = getRandomLineFromFile('streets.txt') . " Street";
-    $city = getRandomLineFromFile('cities.txt');
-    $state = getRandomLineFromFile('states.txt');
-    $zip = rand(10000, 99999);
-    $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
-    $conn->query($sql);}
-	
+
 //order
 
 //product
