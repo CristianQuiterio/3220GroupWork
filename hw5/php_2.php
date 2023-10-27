@@ -83,10 +83,15 @@ for ($i = 1; $i <= 150; $i++) {
 //customer
 
 for ($i = 1; $i <= 100; $i++) {
-    $firtstName = array_rand($arrayFirst);
+    $firstName = array_rand($arrayFirst);
     $domain = array_rand($arrayDomain);
     $lastName = getRandomLineFromFile('.txt');
-    $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firtstName','$lastName','','')";
+    $names=[];
+    $names[0] = $firstName;
+    $names[1] = $lastName;
+    $Emailname = array_rand($names);
+    $Email = "$Emailname.$domain"; 
+    $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firstName','$lastName','','')";
     $conn->query($sql);}
 
 
