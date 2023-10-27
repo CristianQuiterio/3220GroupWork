@@ -36,4 +36,6 @@ for ($i = 1; $i <= 750; $i++) {
     $baseCost=(rand((2,7)*5)+.99;
     $randweight=rand((5,15);
     $weight="$randweight lbs";
+    $sql="INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
+    $conn->query($sql);}
 
