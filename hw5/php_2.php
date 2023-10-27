@@ -54,10 +54,9 @@ for ($i = 1; $i <= 150; $i++) {
 //customer
 
 for ($i = 1; $i <= 100; $i++) {
-    $customerID = rand(10000,99999);
     $firtstName = getRandomLineFromFile('.txt');
-    $lasttName = getRandomLineFromFile('.txt');
-    $sql = "INSERT INTO address () VALUES ()";
+    $lastName = getRandomLineFromFile('.txt');
+    $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firtstName','$lastName','','')";
     $conn->query($sql);}
 
 
