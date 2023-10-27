@@ -1,21 +1,9 @@
+<html>
 <?php
-// Connect to your database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "superstore";
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-
 // Function to read random lines from a text file
 function getRandomLineFromFile($filename) {
-    $lines = file($filename, FILE_IGNORE_NEW_LINES);
-    return $lines[array_rand($lines)];
+   // $lines = file($filename, FILE_IGNORE_NEW_LINES);
+    //return $lines[array_rand($lines)];
 }
 
 //First Name
@@ -78,7 +66,7 @@ for ($i = 1; $i <= 150; $i++) {
     $state = getRandomLineFromFile('states.txt');
     $zip = rand(10000, 99999);
     $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
-    $conn->query($sql);}
+	}
 
 //customer
 
@@ -137,12 +125,12 @@ for ($i = 1; $i <= 750; $i++) {
 			$numLines++;
 		}
 	}				
-	fclose($wareNames);
+	fclose($ReadFile);
+	
 	//write to data.sql
 	$DataFile = fopen("data.sql", "w");
 	for($i = 0;$i < 25; $i++){
-		fputs("INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames.", ".$j.")");
-		}
+		fputs($DataFile, "INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames[$i].", ".$i.")");
 	}
 	fclose($DataFile);	
 	
@@ -154,9 +142,12 @@ for ($i = 1; $i <= 750; $i++) {
 	$DataFile = fopen("data.sql", "w");
 	for($i = 0;$i < 25; $i++){
 		for($j = 0;$j < 50; $j++){
-			fputs("INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")");
+			fputs($DataFile, "INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")");
 		}
 	}
 	fclose($DataFile);
-}
+	
+	print("<h2>Success</h2>");
 
+?>
+</html>
