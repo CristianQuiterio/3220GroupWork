@@ -33,4 +33,7 @@ for ($i = 1; $i <= 750; $i++) {
     $material= getRandomLineFromFile('materials.txt');
     $verb= getRandomLineFromFile('verbs.txt');
     $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
+    $baseCost=(rand((2,7)*5)+.99;
+    $randweight=rand((5,15);
+    $weight="$randweight lbs";
 
