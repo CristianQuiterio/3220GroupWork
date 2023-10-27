@@ -107,13 +107,13 @@ for ($i = 1; $i <= 750; $i++) {
     $adjective1 = getRandomLineFromFile('adjectives.txt');
     $adjective2 = getRandomLineFromFile('adjectives.txt');
     $color = getRandomLineFromFile('colors.txt');
-    $material= getRandomLineFromFile('materials.txt');
-    $verb= getRandomLineFromFile('verbs.txt');
+    $material = getRandomLineFromFile('materials.txt');
+    $verb = getRandomLineFromFile('verbs.txt');
     $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
-    $baseCost=((rand((2,7))*5)+.99);
-    $randweight=rand(5,15);
-    $weight="$randweight lbs";
-    $sql="INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
+    $baseCost = ((rand((2,7))*5)+.99);
+    $randweight = rand(5,15);
+    $weight = "$randweight lbs";
+    $sql = "INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
     $conn->query($sql);
 	
 	//order_item
