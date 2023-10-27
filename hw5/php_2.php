@@ -105,8 +105,8 @@ for ($i = 1; $i <= 750; $i++) {
     $material= getRandomLineFromFile('materials.txt');
     $verb= getRandomLineFromFile('verbs.txt');
     $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
-    $baseCost=(rand((2,7)*5)+.99;
-    $randweight=rand((5,15);
+    $baseCost=((rand((2,7))*5)+.99);
+    $randweight=rand(5,15);
     $weight="$randweight lbs";
     $sql="INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
     $conn->query($sql);
@@ -133,7 +133,7 @@ for ($i = 1; $i <= 750; $i++) {
 		}
 	}				
 	fclose($wareNames);
-	
+	//write to data.sql
 	$DataFile = fopen("data.sql", "w");
 	for($i = 0;$i < 25; $i++){
 		fputs("INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames.", ".$j.")");
@@ -145,6 +145,7 @@ for ($i = 1; $i <= 750; $i++) {
 	
 	//product_warehouse
 	//no unique items, just get random integers as product keys
+	//write to data.sql
 	$DataFile = fopen("data.sql", "w");
 	for($i = 0;$i < 25; $i++){
 		for($j = 0;$j < 50; $j++){
