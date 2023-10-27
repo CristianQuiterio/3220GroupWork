@@ -112,9 +112,39 @@ for ($i = 1; $i <= 750; $i++) {
     $conn->query($sql);
 	
 	//order_item
+	
+	
+	
+	
+	
 	//warehouse
+	//Set up array to hold info and variables for read-in loop
+	$wareNames =[];
+	$numLines = 0;		
+	//Open/Close the file and get each line read in
+	$ReadFile = fopen("warehouse_names.txt", "r");
+	while(!feof($ReadFile)){
+		$candidateLine = fgets($ReadFile);
+		if($candidateLine != ""){
+			$candidateLine = str_replace("\r", "", $candidateLine);
+			$candidateLine = str_replace("\n", "", $candidateLine);
+			$wareNames[$numLines] = $candidateLine;
+			$numLines++;
+		}
+	}				
+	fclose($wareNames);
+	
+	$DataFile = fopen("data.sql", "w");
+	for($i = 0;$i < 25; $i++){
+		fputs("INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames.", ".$j.")");
+		}
+	}
+	fclose($DataFile);	
+	
+	
 	
 	//product_warehouse
+	//no unique items, just get random integers as product keys
 	$DataFile = fopen("data.sql", "w");
 	for($i = 0;$i < 25; $i++){
 		for($j = 0;$j < 50; $j++){
