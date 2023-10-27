@@ -23,5 +23,14 @@ for ($i = 1; $i <= 150; $i++) {
     $state = getRandomLineFromFile('states.txt');
     $zip = rand(10000, 99999);
     $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
-    $conn->query($sql);
+    $conn->query($sql);}
+
+for ($i = 1; $i <= 750; $i++) {
+    $productName = getRandomLineFromFile('nouns.txt');
+    $adjective1 = getRandomLineFromFile('adjectives.txt');
+    $adjective2 = getRandomLineFromFile('adjectives.txt');
+    $color = getRandomLineFromFile('colors.txt');
+    $material= getRandomLineFromFile('materials.txt');
+    $verb= getRandomLineFromFile('verbs.txt');
+    $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
 
