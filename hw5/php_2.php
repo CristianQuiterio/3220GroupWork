@@ -43,23 +43,12 @@ foreach($firstNameLine as $nameLine){
 	}
 }
 		
-//Last Name
-//Set up array to hold info and variables for read-in loop
-$arrayLast=[];
-$numLines = 0;
-//Open/Close the file and get each line read in
-$lastNames=fopen("last_names.txt","r");
-while(!feof($lastNames)){		
-	$candidateLine = fgets($lastNames);
-	if($candidateLine != ""){
-		$candidateLine = str_replace("\r", "", $candidateLine);
-		$candidateLine = str_replace("\n", "", $candidateLine);
-		$arrayLast[$numLines] = $candidateLine;
-		$numLines++;
-	}
-}				
-fclose($lastNames);
-
+//customer
+for ($i = 1; $i <= 100; $i++) {
+    $firstName = getRandomLineFromFile('.txt');
+    $laststName = getRandomLineFromFile('.txt');
+    $sql = "INSERT INTO address () VALUES ()";
+    $conn->query($sql);}
 
 for ($i = 1; $i <= 150; $i++) {
     $street = getRandomLineFromFile('streets.txt') . " Street";
