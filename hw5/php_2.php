@@ -80,7 +80,8 @@ for ($i = 1; $i <= 100; $i++) {
     $Emailname = array_rand($names);
     $Email = "$Emailname.$domain"; 
     $sql = "INSERT INTO address (first_name, last_name, email, phone) VALUES ('$firstName','$lastName','','')";
-    $conn->query($sql);}
+ //   $conn->query($sql);
+	}
 
 
 
@@ -91,19 +92,19 @@ for ($i = 1; $i <= 100; $i++) {
 	//product
 
 for ($i = 1; $i <= 750; $i++) {
-    $productName = getRandomLineFromFile('nouns.txt');
-    $adjective1 = getRandomLineFromFile('adjectives.txt');
-    $adjective2 = getRandomLineFromFile('adjectives.txt');
-    $color = getRandomLineFromFile('colors.txt');
-    $material = getRandomLineFromFile('materials.txt');
-    $verb = getRandomLineFromFile('verbs.txt');
-    $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
-    $baseCost = ((rand((2,7))*5)+.99);
-    $randweight = rand(5,15);
-    $weight = "$randweight lbs";
-    $sql = "INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
-    $conn->query($sql);
-	
+  //  $productName = getRandomLineFromFile('nouns.txt');
+  //  $adjective1 = getRandomLineFromFile('adjectives.txt');
+  //  $adjective2 = getRandomLineFromFile('adjectives.txt');
+   // $color = getRandomLineFromFile('colors.txt');
+   // $material = getRandomLineFromFile('materials.txt');
+ //   $verb = getRandomLineFromFile('verbs.txt');
+ //   $productdescription = "A $adjective1 $productName in an $adjective2 $color made of $material useful for $verb";
+ //   $baseCost = ((rand((2,7))*5)+.99);
+ //   $randweight = rand(5,15);
+ //   $weight = "$randweight lbs";
+  //  $sql = "INSERT INTO address (product_name, description, weight, base_cost) VALUES ('$productName', '$productdescription', '$weight', '$baseCost')";
+ //   $conn->query($sql);
+	}
 	//order_item
 	
 	
@@ -130,7 +131,7 @@ for ($i = 1; $i <= 750; $i++) {
 	//write to data.sql
 	$DataFile = fopen("data.sql", "a");
 	for($i = 0;$i < 25; $i++){
-		fputs($DataFile, "INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames[$i].", ".$i.")");
+		fputs($DataFile, "INSERT INTO `warehouse` (`name`, `address_id`) VALUES (".$wareNames[$i].", ".$i.")"."\n");
 	}
 	fclose($DataFile);	
 	
@@ -142,7 +143,7 @@ for ($i = 1; $i <= 750; $i++) {
 	$DataFile = fopen("data.sql", "a");
 	for($i = 0;$i < 25; $i++){
 		for($j = 0;$j < 50; $j++){
-			fputs($DataFile, "INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")");
+			fputs($DataFile, "INSERT INTO `product_warehouse` (`product_id`, `warehouse_id`) VALUES (".rand(0,749).", ".$j.")"."\n");
 		}
 	}
 	fclose($DataFile);
