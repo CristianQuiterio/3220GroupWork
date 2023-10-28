@@ -51,7 +51,7 @@ CREATE TABLE `order_item` (
 );
 
 CREATE TABLE `warehouse` (
-  `warehouse_id` int(20) DEFAULT NULL,
+  `warehouse_id` int(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
   `address_id` int(20) DEFAULT NULL,
   PRIMARY KEY (`warehouse_id`),
