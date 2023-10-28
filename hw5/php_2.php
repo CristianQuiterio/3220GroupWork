@@ -2,8 +2,8 @@
 <?php
 // Function to read random lines from a text file
 function getRandomLineFromFile($filename) {
-   // $lines = file($filename, FILE_IGNORE_NEW_LINES);
-    //return $lines[array_rand($lines)];
+    $lines = file($filename, FILE_IGNORE_NEW_LINES);
+    return $lines[array_rand($lines)];
 }
 
 //First Name
@@ -61,11 +61,11 @@ foreach($domainNameLine as $nameLine){
 
 //address
 for ($i = 1; $i <= 150; $i++) {
-    $street = getRandomLineFromFile('streets.txt') . " Street";
-    $city = getRandomLineFromFile('cities.txt');
-    $state = getRandomLineFromFile('states.txt');
-    $zip = rand(10000, 99999);
-    $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
+ //   $street = getRandomLineFromFile('streets.txt') . " Street";
+  //  $city = getRandomLineFromFile('cities.txt');
+  //  $state = getRandomLineFromFile('states.txt');
+  //  $zip = rand(10000, 99999);
+  //  $sql = "INSERT INTO address (street, city, state, zip) VALUES ('$street', '$city', '$state', '$zip')";
 	}
 
 //customer
@@ -73,7 +73,7 @@ for ($i = 1; $i <= 150; $i++) {
 for ($i = 1; $i <= 100; $i++) {
     $firstName = array_rand($arrayFirst);
     $domain = array_rand($arrayDomain);
-    $lastName = getRandomLineFromFile('.txt');
+    $lastName = getRandomLineFromFile('last_names.txt');
     $names=[];
     $names[0] = $firstName;
     $names[1] = $lastName;
