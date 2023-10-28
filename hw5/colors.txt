@@ -8,3 +8,9 @@ red
 orange
 yellow
 white
+scarlet
+burgundy
+tangerine
+bronze
+coral
+amber
