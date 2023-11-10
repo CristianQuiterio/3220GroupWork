@@ -22,8 +22,9 @@
    where active=0;
 
 7. SELECT title, rental_rate, language_id
-   FROM sakila.film
-   WHERE special_features LIKE '%Sci-Fi%';
+   FROM film
+   inner join film_category on film.film_id = film_category.film_id
+   WHERE category_id = 14;
 
 8. SELECT COUNT(DISTINCT title) AS action_film_count
    FROM sakila.film
