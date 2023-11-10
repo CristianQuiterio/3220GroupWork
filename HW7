@@ -1,0 +1,9 @@
+1.SELECT first_name FROM actor WHERE a.lastname="Kilmer"
+
+2.SELECT
+
+3.SELECT first_name, last_name, email FROM customer
+
+4.SELECT first_name, last_name, email FROM customer WHERE active=0
+
+5.SELECT last_name, first_name, address_id, FROM customer
