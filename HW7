@@ -45,23 +45,28 @@
     inner join film_category on film.film_id = film_category.film_id
     WHERE category_id = 1 AND rating IN ('PG-13', 'R', 'NC-17');
 
-12. SELECT AVG(length) AS avg_length
-    FROM sakila.film
-    WHERE special_features LIKE '%Children%';
+12. SELECT AVG(length)
+    FROM film
+    inner join film_category on film.film_id = film_category.film_id
+    WHERE category_id=3;
 
-13. SELECT a.last_name, a.first_name, f.title
-    FROM sakila.actor a
-    JOIN sakila.film_actor fa ON a.actor_id = fa.actor_id
-    JOIN sakila.film f ON fa.film_id = f.film_id
-    WHERE f.special_features IN ('Family', 'Foreign', 'Horror')
-    ORDER BY a.last_name;
+13. SELECT actor.last_name, actor.first_name, title
+    FROM actor
+    inner join film_actor on actor.actor_id = film_actor.actor_id
+    inner join film_category on film_actor.film_id = film_category.film_id 
+    inner join film on film.film_id = film_category.film_id 
+    WHERE category_id=11 or category_id=9 or category_id=8
+    ORDER BY actor.last_name;
 
-14. SELECT a.last_name, a.first_name, f.title, f.special_features AS category
-    FROM sakila.actor a
-    JOIN sakila.film_actor fa ON a.actor_id = fa.actor_id
-    JOIN sakila.film f ON fa.film_id = f.film_id
-    WHERE f.special_features IN ('Family', 'Horror')
-    ORDER BY a.last_name;
+14. SELECT actor.last_name, actor.first_name, title, category.name as category
+    FROM actor
+    inner join film_actor on actor.actor_id = film_actor.actor_id
+    inner join film_category on film_actor.film_id = film_category.film_id 
+    inner join film on film.film_id = film_category.film_id 
+    inner join category on film_category.category_id  = category.category_id 
+    WHERE category.category_id =11 or category.category_id=8
+    ORDER BY actor.last_name;
+
 
 15. SELECT c.last_name, c.first_name, c.email
     FROM sakila.customer c
