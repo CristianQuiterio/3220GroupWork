@@ -1,9 +1,93 @@
-1.SELECT first_name FROM actor WHERE a.lastname="Kilmer"
+1. SELECT * FROM actor WHERE last_name = 'Kilmer'
 
-2.SELECT
+2. SELECT COUNT(DISTINCT last_name) AS unique_last_names FROM actor
 
-3.SELECT first_name, last_name, email FROM customer
+3. SELECT last_name, first_name, email FROM customer ORDER BY last_name
 
-4.SELECT first_name, last_name, email FROM customer WHERE active=0
+4. SELECT last_name, first_name, email
+   FROM customer
+   WHERE active = 0
+   ORDER BY last_name
 
-5.SELECT last_name, first_name, address_id, FROM customer
+5. SELECT last_name, first_name, address, district, phone FROM customer
+
+6. SELECT c.last_name, c.first_name, c.address, c.district, c.phone, ci.city, co.country, c.postal_code
+   FROM customer c
+   JOIN address a ON c.address_id = a.address_id
+   JOIN city ci ON a.city_id = ci.city_id
+   JOIN country co ON ci.country_id = co.country_id
+   WHERE c.active = 0;
+
+7. SELECT title, rental_rate, language_id
+   FROM sakila.film
+   WHERE special_features LIKE '%Sci-Fi%';
+
+8. SELECT COUNT(DISTINCT title) AS action_film_count
+   FROM sakila.film
+   WHERE special_features LIKE '%Action%';
+
+9. SELECT COUNT(DISTINCT f.title) AS action_film_count
+   FROM sakila.film f
+   JOIN sakila.inventory i ON f.film_id = i.film_id
+   WHERE f.special_features LIKE '%Action%';
+
+10. SELECT title, rental_duration
+    FROM sakila.film
+    WHERE replacement_cost BETWEEN 15 AND 23;
+
+11. SELECT title
+    FROM sakila.film
+    WHERE special_features LIKE '%Action%' AND rating IN ('PG-13', 'R', 'NC-17');
+
+12. SELECT AVG(length) AS avg_length
+    FROM sakila.film
+    WHERE special_features LIKE '%Children%';
+
+13. SELECT a.last_name, a.first_name, f.title
+    FROM sakila.actor a
+    JOIN sakila.film_actor fa ON a.actor_id = fa.actor_id
+    JOIN sakila.film f ON fa.film_id = f.film_id
+    WHERE f.special_features IN ('Family', 'Foreign', 'Horror')
+    ORDER BY a.last_name;
+
+14. SELECT a.last_name, a.first_name, f.title, f.special_features AS category
+    FROM sakila.actor a
+    JOIN sakila.film_actor fa ON a.actor_id = fa.actor_id
+    JOIN sakila.film f ON fa.film_id = f.film_id
+    WHERE f.special_features IN ('Family', 'Horror')
+    ORDER BY a.last_name;
+
+15. SELECT c.last_name, c.first_name, c.email
+    FROM sakila.customer c
+    JOIN sakila.rental r ON c.customer_id = r.customer_id
+    JOIN sakila.inventory i ON r.inventory_id = i.inventory_id
+    JOIN sakila.film_actor fa ON i.film_id = fa.film_id
+    JOIN sakila.actor a ON fa.actor_id = a.actor_id
+    WHERE a.first_name IN ('NICK', 'MATTHEW', 'RITA') AND a.last_name IN ('WAHLBERG', 'JOHANSSON', 'REYNOLDS')
+    GROUP BY c.customer_id;
+
+16. SELECT f.title
+    FROM sakila.customer c
+    JOIN sakila.rental r ON c.customer_id = r.customer_id
+    JOIN sakila.inventory i ON r.inventory_id = i.inventory_id
+    JOIN sakila.film f ON i.film_id = f.film_id
+    WHERE c.first_name = 'HOLLY' AND c.last_name = 'FOX';
+
+17. SELECT c.first_name, c.last_name, a.address, ci.city, a.postal_code
+    FROM sakila.customer c
+    JOIN sakila.payment p ON c.customer_id = p.customer_id
+    JOIN sakila.address a ON c.address_id = a.address_id
+    JOIN sakila.city ci ON a.city_id = ci.city_id
+    WHERE p.amount BETWEEN 10 AND 12
+    GROUP BY c.customer_id;
+
+18. SELECT title, description
+    FROM sakila.film
+    WHERE language_id <> 1; -- Assuming 1 is the ID for English
+
+
+
+
+
+
+
