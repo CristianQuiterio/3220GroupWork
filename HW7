@@ -31,10 +31,10 @@
    inner join film_category on film.film_id = film_category.film_id
    WHERE category_id = 1;
 
-9. SELECT COUNT(DISTINCT f.title) AS action_film_count
-   FROM sakila.film f
-   JOIN sakila.inventory i ON f.film_id = i.film_id
-   WHERE f.special_features LIKE '%Action%';
+9.  SELECT count(inventory.film_id )
+   FROM inventory
+   inner join film_category on inventory.film_id = film_category.film_id
+   WHERE category_id = 1;
 
 10. SELECT title, rental_duration
     FROM sakila.film
@@ -42,7 +42,8 @@
 
 11. SELECT title
     FROM sakila.film
-    WHERE special_features LIKE '%Action%' AND rating IN ('PG-13', 'R', 'NC-17');
+    inner join film_category on film.film_id = film_category.film_id
+    WHERE category_id = 1 AND rating IN ('PG-13', 'R', 'NC-17');
 
 12. SELECT AVG(length) AS avg_length
     FROM sakila.film
