@@ -9,7 +9,9 @@
    WHERE active = 0
    ORDER BY last_name
 
-5. SELECT last_name, first_name, address, district, phone FROM customer
+5. SELECT c.last_name, c.first_name, c.address, c.district, c.phone
+   FROM customer c
+   JOIN address a ON c.address_id = a.address_id;
 
 6. SELECT c.last_name, c.first_name, c.address, c.district, c.phone, ci.city, co.country, c.postal_code
    FROM customer c
