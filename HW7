@@ -26,9 +26,10 @@
    inner join film_category on film.film_id = film_category.film_id
    WHERE category_id = 14;
 
-8. SELECT COUNT(DISTINCT title) AS action_film_count
-   FROM sakila.film
-   WHERE special_features LIKE '%Action%';
+8. SELECT count(distinct title)
+   FROM film
+   inner join film_category on film.film_id = film_category.film_id
+   WHERE category_id = 1;
 
 9. SELECT COUNT(DISTINCT f.title) AS action_film_count
    FROM sakila.film f
