@@ -14,12 +14,12 @@
    inner JOIN address ON customer.address_id = address.address_id;
 
 
-6. SELECT c.last_name, c.first_name, c.address, c.district, c.phone, ci.city, co.country, c.postal_code
-   FROM customer c
-   JOIN address a ON c.address_id = a.address_id
-   JOIN city ci ON a.city_id = ci.city_id
-   JOIN country co ON ci.country_id = co.country_id
-   WHERE c.active = 0;
+6. SELECT last_name, first_name, address, phone, district, city, country
+   FROM customer 
+   inner JOIN address ON customer.address_id = address.address_id
+   inner join city on address.city_id = city.city_id
+   inner join country on city.country_id = country.country_id
+   where active=0;
 
 7. SELECT title, rental_rate, language_id
    FROM sakila.film
