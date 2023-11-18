@@ -17,7 +17,7 @@ exit('Error connecting to database'); //Should be a message a typical user could
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli->set_charset("utf8mb4");
 
-$stmt = $mysqli->prepare("SELECT last_name, first_name, address, phone, district FROM customer inner JOIN address ON customer.address_id = address.address_id");
+$stmt = $mysqli->prepare("SELECT last_name, first_name, address, phone, district FROM customer inner JOIN address ON customer.address_id = address.address_id ORDER BY last_name");
 $stmt->execute();
 $stmt->bind_result($lname, $fname, $address, $phone, $district);
 
