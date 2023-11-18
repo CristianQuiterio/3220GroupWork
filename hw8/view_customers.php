@@ -9,7 +9,6 @@
 <a href = "manager.html"> Back </a>
 <?php
 try{
-
 $mysqli = new mysqli("localhost", "root", "", "sakila");
 if($mysqli->connect_error) {
 exit('Error connecting to database'); //Should be a message a typical user could understand in production
@@ -29,7 +28,12 @@ $lname, $fname, $address, $phone, $district);
 $stmt->close();
 
 
-
+}catch(Exception $e) {
+print ("An Error Has Occured. Did not add to the DB!!<br>");
+print("<form action = ".'manager.html'." method = ".'post'." >
+<input type = ".'submit'." value = ".'Add Film'." >
+</form>");
+}
 ?>
 </body>
 </html>
