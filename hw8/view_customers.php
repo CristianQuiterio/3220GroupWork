@@ -4,7 +4,7 @@
 	<link rel="styleSheet" href="sample.css" type="text/css" media="all">
 </head>
 <body>
-<h1>Film Data Base</h1>
+<h1>Sakila Data Base</h1>
 <form action = "manager.html" method = "post" >
 <input type = "submit" value = "Home" >
 </form>
@@ -21,10 +21,23 @@ $stmt = $mysqli->prepare("SELECT last_name, first_name, address, phone, district
 $stmt->execute();
 $stmt->bind_result($lname, $fname, $address, $phone, $district);
 
+
+//make the table header
+print "<table>";
+print "<h2>Customer Data </h2>";
+print "<table border = '.5'>";
+Print ("<tr><th>Last Name</th><th>First Name</th><th>Address</th><th>Phone Number</th><th>District</th><th>Titles Rented</th></tr>");
+//print the table out
+
 while ($stmt->fetch()) {
-printf("%s, %s, %s, %s\n",
-$lname, $fname, $address, $phone, $district);
+  print "<td>".$lname."</td>";
+  print "<td>".$fname."</td>";
+  print "<td>".$address."</td>";
+  print "<td>".$phone."</td>";
+  print "<td>".$district."</td>";
+  print "</tr>";
 }
+print "</table>";
 
 $stmt->close();
 
