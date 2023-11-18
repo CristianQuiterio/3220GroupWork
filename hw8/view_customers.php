@@ -1,13 +1,13 @@
 <html>
 <head>
-<title></title>
+<title>Customers</title>
+<li><a href="http://localhost/3220/hw08/manager.html">Home Page</a>
+
 </head>
 <body>
 <h1></h1>
 <a href = "manager.html"> Back </a>
 <?php
-<li><a href="http://localhost/3220/hw08/manager.html">Home Page</a>
-
 try{
 
 $mysqli = new mysqli("localhost", "root", "", "sakila");
