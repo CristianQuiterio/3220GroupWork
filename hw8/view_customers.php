@@ -6,7 +6,7 @@
 <h1></h1>
 <a href = "manager.html"> Back </a>
 <?php
-li><a href="http://localhost/3220/hw08/manager.html">Home Page</a>
+<li><a href="http://localhost/3220/hw08/manager.html">Home Page</a>
 
 $con = new mysqli($host, $user, $password, $dbname, $port, $socket)
 or die ('Could not connect to the database server' . mysqli_connect_error());
