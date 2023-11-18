@@ -19,7 +19,7 @@ $mysqli->set_charset("utf8mb4");
 
 $stmt = $mysqli->prepare("SELECT last_name, first_name, address, phone, district, title FROM customer inner JOIN address ON customer.address_id = address.address_id inner JOIN rental on customer.customer_id = rental.customer.id inner JOIN inventory on rental.inventory_id = inventory.inventory_id inner JOIN film on inventory.film_id =film.film_id ORDER BY last_name");
 $stmt->execute();
-$stmt->bind_result($lname, $fname, $address, $phone, $district $title);
+$stmt->bind_result($lname, $fname, $address, $phone, $district, $title);
 
 
 //make the table header
@@ -35,6 +35,7 @@ while ($stmt->fetch()) {
   print "<td>".$address."</td>";
   print "<td>".$phone."</td>";
   print "<td>".$district."</td>";
+  print "<td>".$title."</td>";
   print "</tr>";
 }
 print "</table>";
