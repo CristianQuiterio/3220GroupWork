@@ -14,7 +14,11 @@ exit('Error connecting to database'); //Should be a message a typical user could
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli->set_charset("utf8mb4");
 
-
+$stmt = $mysqli->prepare("INSERT INTO sakila.film (title,description,release_year,language_id,rental_duration,rental_rate,length,replacement_cost,rating,special_features) VALUES (?,?,?,?,?,?,?,?,?,?)");
+$stmt->bind_param('ssisididss', $_POST['title'], $_POST['description'], $_POST['releaseYear'], $_POST['langID'], $_POST['rentDuration'], $_POST['rentRate'], $_POST['length'], $_POST['repCost'], $_POST['rating'], $_POST['special_features']);
+$stmt->execute();
+$stmt->close();
+;
 
 $mysqli->close();
 
