@@ -1,6 +1,7 @@
 <html>
 <head>
-<title>Customers</title>
+	<title>Customers</title>
+	<link rel="styleSheet" href="sample.css" type="text/css" media="all">
 </head>
 <body>
 <h1>Film Data Base</h1>
