@@ -1,12 +1,12 @@
 <html>
 <head>
 <title>Customers</title>
-<li><a href="http://localhost/3220/hw08/manager.html">Home Page</a>
-
 </head>
 <body>
-<h1></h1>
-<a href = "manager.html"> Back </a>
+<h1>Film Data Base</h1>
+<form action = "manager.html" method = "post" >
+<input type = "submit" value = "Home" >
+</form>
 <?php
 try{
 
@@ -29,7 +29,9 @@ $lname, $fname, $address, $phone, $district);
 $stmt->close();
 
 
-
+}catch(Exception $e) {
+print ("An Error Has Occured. Did not find the DB!!<br>");
+}
 ?>
 </body>
 </html>
